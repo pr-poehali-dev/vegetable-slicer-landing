@@ -69,8 +69,8 @@ const Index = () => {
   const equipment = [
     {
       id: 1,
-      name: 'Вакуумный шприц для колбасных изделий',
-      image: 'https://cdn.poehali.dev/projects/dc55a807-6efd-43bf-a71c-0f79d937bea4/files/8467db2e-4613-4313-ae63-9d3cb4838ef1.jpg',
+      name: 'Вакуумный шприц GZY2000 для колбасных изделий',
+      image: 'https://cdn.poehali.dev/files/bfadd834-a4e4-423e-9f2f-4a3da77a6e6d.jpg',
       features: ['Работает в 6 режимах', 'Совместим со всеми типами оболочек', 'Сохраняет текстуру продукта'],
       details: 'Комплектация: сенсорный экран, вакуумный насос, нержавеющая сталь'
     },
