@@ -98,7 +98,7 @@ const Index = () => {
     {
       id: 5,
       name: 'Машина для нарезки овощей DRB-108S',
-      image: 'https://cdn.poehali.dev/projects/dc55a807-6efd-43bf-a71c-0f79d937bea4/files/e7201c7c-3cb5-4f1f-95d1-912198bcf454.jpg',
+      image: 'https://cdn.poehali.dev/files/96e1e993-be6d-4de8-8cbf-e5ca559b9ee1.png',
       features: ['Производительность до 800 кг/ч', '9 сменных решёток', 'Мобильная конструкция на колёсах', 'Лёгкая очистка'],
       details: 'Полуавтоматическая овощерезательная машина'
     },
