@@ -99,68 +99,20 @@ const Index = () => {
 
   const equipment = [
     {
-      id: 1,
-      name: 'Вакуумный шприц GZY2000 для колбасных изделий',
-      image: 'https://cdn.poehali.dev/files/bfadd834-a4e4-423e-9f2f-4a3da77a6e6d.jpg',
-      features: ['Работает в 6 режимах', 'Совместим со всеми типами оболочек', 'Сохраняет текстуру продукта'],
-      details: 'Комплектация: сенсорный экран, вакуумный насос, нержавеющая сталь'
-    },
-    {
-      id: 2,
-      name: 'Вакуумный массажер для мяса GRZK500',
-      image: 'https://cdn.poehali.dev/files/b0157878-c79f-4e38-bd09-f70ede3185f5.jpg',
-      features: ['Объём бака: 500 л', 'Вакуумный насос: 20 м³/ч', 'Реверс вращения', 'Сенсорный экран'],
-      details: 'Профессиональное оборудование для подготовки мясного сырья'
-    },
-    {
-      id: 3,
-      name: 'Машина для нарезки DRB-PSD 300',
-      image: 'https://cdn.poehali.dev/files/bf1dd1db-a221-47ce-b8da-93fec6ea53e2.jpg',
-      features: ['Нарезка мяса, птицы, рыбы', 'Сенсорный экран', 'Быстрая разборка для мойки', 'Низкий уровень шума'],
-      details: 'Универсальная машина для нарезки кубиками и полосками'
-    },
-    {
-      id: 4,
-      name: 'Блокорезка роторная DRB-PR 3000',
-      image: 'https://cdn.poehali.dev/files/a109eda6-fca3-4cf3-83a4-1c19d9f26844.png',
-      features: ['Производительность до 4000 кг/ч', 'Работа с блоками до 25 кг', 'Защитные кожухи', 'Регулируемая толщина резки'],
-      details: 'Высокопроизводительная блокорезка для замороженного мяса'
+      id: 6,
+      name: 'Шкуросъемная машина DRB-Y270',
+      image: 'https://cdn.poehali.dev/files/bb38ce8b-08c0-4d72-a531-166aed397797.jpg',
+      features: ['Компактная конструкция', 'Регулируемый нож', 'Низкое количество отходов', 'Безопасность оператора'],
+      details: 'Настольная шкуросъемная машина для рыбы',
+      price: 492800
     },
     {
       id: 5,
       name: 'Машина для нарезки овощей DRB-108S',
       image: 'https://cdn.poehali.dev/files/96e1e993-be6d-4de8-8cbf-e5ca559b9ee1.png',
       features: ['Производительность до 800 кг/ч', '9 сменных решёток', 'Мобильная конструкция на колёсах', 'Лёгкая очистка'],
-      details: 'Полуавтоматическая овощерезательная машина'
-    },
-    {
-      id: 6,
-      name: 'Шкуросъемная машина DRB-Y270',
-      image: 'https://cdn.poehali.dev/files/bb38ce8b-08c0-4d72-a531-166aed397797.jpg',
-      features: ['Компактная конструкция', 'Регулируемый нож', 'Низкое количество отходов', 'Безопасность оператора'],
-      details: 'Настольная шкуросъемная машина для рыбы'
-    },
-    {
-      id: 7,
-      name: 'Клипсатор двухскрепочный автоматический DKJU-200',
-      image: 'https://cdn.poehali.dev/files/3772eba0-5e7e-4717-a77c-2aacb560c8e5.jpg',
-      features: ['Рабочее давление воздуха: 0,5 МПа', 'Расход воздуха: 700 л/мин', 'U-образный клипс: 210, 220', 'Расстояние между клипсами: 22mm'],
-      details: 'Автоматический двухскрепочный клипсатор для производства колбас'
-    },
-    {
-      id: 8,
-      name: 'Инъектор автоматический для посола ZS-88',
-      image: 'https://cdn.poehali.dev/files/d94874fd-b27c-40ac-ad77-61a056b062d1.jpg',
-      features: [
-        'Посол костного и бескостного мяса, птицы',
-        'Стабилизатор давления для равномерной инъекции',
-        'Регулировка давления впрыска рассола',
-        'Независимые иглы с вертикальным перемещением',
-        '4-ступенчатая фильтрация рассола',
-        'Точная конвейерная подача сырья',
-        'Все детали из пищевой нержавеющей стали'
-      ],
-      details: 'Производительность: 3 т/ч • Количество игл: 88 шт. • Диаметр игл: 2, 3, 4 мм • Ширина зоны инъекции: 565 мм • Габариты: 1700×1200×2030 мм • Вес: 700 кг'
+      details: 'Полуавтоматическая овощерезательная машина',
+      price: 658000
     },
     {
       id: 9,
@@ -175,7 +127,64 @@ const Index = () => {
         'Возможность двойной инъекции (до 180%)',
         'Простота эксплуатации и обслуживания'
       ],
-      details: 'Количество игл: 50 шт. (диаметр 4 мм) • Скорость впрыска: 17–60 раз/мин • Ширина конвейера: 350 мм • Габариты: 1700×750×1650 мм • Вес: 560 кг • Высота продукта: до 180 мм'
+      details: 'Количество игл: 50 шт. (диаметр 4 мм) • Скорость впрыска: 17–60 раз/мин • Ширина конвейера: 350 мм • Габариты: 1700×750×1650 мм • Вес: 560 кг • Высота продукта: до 180 мм',
+      price: 1285000
+    },
+    {
+      id: 4,
+      name: 'Блокорезка роторная DRB-PR 3000',
+      image: 'https://cdn.poehali.dev/files/a109eda6-fca3-4cf3-83a4-1c19d9f26844.png',
+      features: ['Производительность до 4000 кг/ч', 'Работа с блоками до 25 кг', 'Защитные кожухи', 'Регулируемая толщина резки'],
+      details: 'Высокопроизводительная блокорезка для замороженного мяса',
+      price: 1309000
+    },
+    {
+      id: 2,
+      name: 'Вакуумный массажер для мяса GRZK500',
+      image: 'https://cdn.poehali.dev/files/b0157878-c79f-4e38-bd09-f70ede3185f5.jpg',
+      features: ['Объём бака: 500 л', 'Вакуумный насос: 20 м³/ч', 'Реверс вращения', 'Сенсорный экран'],
+      details: 'Профессиональное оборудование для подготовки мясного сырья',
+      price: 1316000
+    },
+    {
+      id: 7,
+      name: 'Клипсатор двухскрепочный автоматический DKJU-200',
+      image: 'https://cdn.poehali.dev/files/3772eba0-5e7e-4717-a77c-2aacb560c8e5.jpg',
+      features: ['Рабочее давление воздуха: 0,5 МПа', 'Расход воздуха: 700 л/мин', 'U-образный клипс: 210, 220', 'Расстояние между клипсами: 22mm'],
+      details: 'Автоматический двухскрепочный клипсатор для производства колбас',
+      price: 1650000
+    },
+    {
+      id: 3,
+      name: 'Машина для нарезки DRB-PSD 300',
+      image: 'https://cdn.poehali.dev/files/bf1dd1db-a221-47ce-b8da-93fec6ea53e2.jpg',
+      features: ['Нарезка мяса, птицы, рыбы', 'Сенсорный экран', 'Быстрая разборка для мойки', 'Низкий уровень шума'],
+      details: 'Универсальная машина для нарезки кубиками и полосками',
+      price: 2012000
+    },
+    {
+      id: 1,
+      name: 'Вакуумный шприц GZY2000 для колбасных изделий',
+      image: 'https://cdn.poehali.dev/files/bfadd834-a4e4-423e-9f2f-4a3da77a6e6d.jpg',
+      features: ['Работает в 6 режимах', 'Совместим со всеми типами оболочек', 'Сохраняет текстуру продукта'],
+      details: 'Комплектация: сенсорный экран, вакуумный насос, нержавеющая сталь',
+      price: 3255000
+    },
+    {
+      id: 8,
+      name: 'Инъектор автоматический для посола ZS-88',
+      image: 'https://cdn.poehali.dev/files/d94874fd-b27c-40ac-ad77-61a056b062d1.jpg',
+      features: [
+        'Посол костного и бескостного мяса, птицы',
+        'Стабилизатор давления для равномерной инъекции',
+        'Регулировка давления впрыска рассола',
+        'Независимые иглы с вертикальным перемещением',
+        '4-ступенчатая фильтрация рассола',
+        'Точная конвейерная подача сырья',
+        'Все детали из пищевой нержавеющей стали'
+      ],
+      details: 'Производительность: 3 т/ч • Количество игл: 88 шт. • Диаметр игл: 2, 3, 4 мм • Ширина зоны инъекции: 565 мм • Габариты: 1700×1200×2030 мм • Вес: 700 кг',
+      price: 0
     }
   ];
 
@@ -234,9 +243,47 @@ const Index = () => {
             <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-600 mb-6">
               До 22.12.2025: скидка 5% от цен с сайта
             </p>
-            <p className="text-xl sm:text-2xl text-gray-700 mb-12 font-medium">
+            <p className="text-xl sm:text-2xl text-gray-700 mb-8 font-medium">
               Оборудование на складе • Доставка за наш счёт
             </p>
+            
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 mb-8 max-w-3xl mx-auto shadow-2xl">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4">Акция на оборудование:</h3>
+              <ul className="grid sm:grid-cols-2 gap-3 text-left">
+                <li className="flex items-start gap-2">
+                  <Icon name="CircleCheck" size={20} className="text-orange-600 mt-1 flex-shrink-0" />
+                  <span className="text-base sm:text-lg">Вакуумный шприц GZY2000</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="CircleCheck" size={20} className="text-orange-600 mt-1 flex-shrink-0" />
+                  <span className="text-base sm:text-lg">Вакуумный массажер GRZK500</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="CircleCheck" size={20} className="text-orange-600 mt-1 flex-shrink-0" />
+                  <span className="text-base sm:text-lg">Машина для нарезки DRB-PSD 300</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="CircleCheck" size={20} className="text-orange-600 mt-1 flex-shrink-0" />
+                  <span className="text-base sm:text-lg">Блокорезка DRB-PR 3000</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="CircleCheck" size={20} className="text-orange-600 mt-1 flex-shrink-0" />
+                  <span className="text-base sm:text-lg">Овощерезка DRB-108S</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="CircleCheck" size={20} className="text-orange-600 mt-1 flex-shrink-0" />
+                  <span className="text-base sm:text-lg">Шкуросъемная машина DRB-Y270</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="CircleCheck" size={20} className="text-orange-600 mt-1 flex-shrink-0" />
+                  <span className="text-base sm:text-lg">Клипсатор DKJU-200</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="CircleCheck" size={20} className="text-orange-600 mt-1 flex-shrink-0" />
+                  <span className="text-base sm:text-lg">Инъектор DRB-ZS50</span>
+                </li>
+              </ul>
+            </div>
             
             <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-12">
               <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl min-w-[90px] sm:min-w-[120px] border-4 border-orange-500">
@@ -264,6 +311,37 @@ const Index = () => {
               <Button size="lg" variant="outline" onClick={() => openQuickForm('Общий запрос')} className="text-xl sm:text-2xl px-10 sm:px-12 py-6 sm:py-8 h-auto border-4 border-orange-600 text-orange-600 hover:bg-orange-50 font-bold shadow-xl">
                 Получить предложение
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 sm:py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12">Преимущества оборудования</h2>
+          <div className="max-w-4xl mx-auto bg-white rounded-2xl p-6 sm:p-10 shadow-xl">
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <Icon name="Award" size={32} className="text-orange-600 flex-shrink-0" />
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2">Высокое качество стали марки 304</h3>
+                  <p className="text-base sm:text-lg text-gray-600">Пищевая нержавеющая сталь гарантирует безопасность продукции и долговечность оборудования</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <Icon name="Settings" size={32} className="text-orange-600 flex-shrink-0" />
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2">Комплектующие мировых брендов</h3>
+                  <p className="text-base sm:text-lg text-gray-600">NORD, Mitsubishi, Schneider, SIEMENS и OMRON — лучшие компоненты для надёжной работы</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <Icon name="ShieldCheck" size={32} className="text-orange-600 flex-shrink-0" />
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2">Безотказная работа</h3>
+                  <p className="text-base sm:text-lg text-gray-600">Исключительная долговечность и продолжительный срок службы оборудования</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -309,7 +387,12 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {equipment.map((item) => (
               <Card key={item.id} className="overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                <div className="aspect-square w-full overflow-hidden bg-gray-100">
+                <div className="aspect-square w-full overflow-hidden bg-gray-100 relative">
+                  {item.price > 0 && (
+                    <div className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg z-10">
+                      -5%
+                    </div>
+                  )}
                   <img 
                     src={item.image} 
                     alt={item.name}
@@ -317,7 +400,16 @@ const Index = () => {
                   />
                 </div>
                 <CardContent className="p-6 flex-grow flex flex-col">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-4">{item.name}</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2">{item.name}</h3>
+                  {item.price > 0 && (
+                    <div className="mb-4">
+                      <div className="flex items-baseline gap-3">
+                        <span className="text-3xl font-bold text-orange-600">{(item.price * 0.95).toLocaleString('ru-RU')} ₽</span>
+                        <span className="text-lg text-gray-400 line-through">{item.price.toLocaleString('ru-RU')} ₽</span>
+                      </div>
+                      <p className="text-sm text-green-600 font-semibold mt-1">Экономия: {(item.price * 0.05).toLocaleString('ru-RU')} ₽</p>
+                    </div>
+                  )}
                   <ul className="space-y-3 mb-6 flex-grow">
                     {item.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-3">
