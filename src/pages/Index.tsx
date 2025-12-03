@@ -533,20 +533,20 @@ const Index = () => {
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="text-xl sm:text-2xl">Получить предложение</DialogTitle>
-            {selectedEquipmentImage && (
-              <div className="mt-4 w-full aspect-square overflow-hidden bg-gray-100 rounded-lg">
-                <img 
-                  src={selectedEquipmentImage} 
-                  alt={selectedEquipment}
-                  className="w-full h-full object-contain p-4"
-                />
-              </div>
-            )}
-            <p className="text-sm text-muted-foreground mt-2">
+            <p className="text-lg sm:text-xl font-semibold mt-2 text-gray-800">
               {selectedEquipment}
             </p>
           </DialogHeader>
-          <form onSubmit={handleQuickSubmit} className="space-y-4 mt-4">
+          {selectedEquipmentImage && (
+            <div className="w-full aspect-square overflow-hidden bg-gray-100 rounded-lg">
+              <img 
+                src={selectedEquipmentImage} 
+                alt={selectedEquipment}
+                className="w-full h-full object-contain p-4"
+              />
+            </div>
+          )}
+          <form onSubmit={handleQuickSubmit} className="space-y-4">
             <div>
               <Label htmlFor="quick-name">Имя *</Label>
               <Input
@@ -568,7 +568,7 @@ const Index = () => {
                 placeholder="+7 (999) 123-45-67"
               />
             </div>
-            <Button type="submit" className="w-full text-xl py-6 h-auto bg-orange-600 hover:bg-orange-700 font-bold shadow-xl">
+            <Button type="submit" className="w-full text-lg py-5 h-auto bg-orange-600 hover:bg-orange-700 font-bold shadow-xl">
               Получить предложение со скидкой
             </Button>
           </form>
