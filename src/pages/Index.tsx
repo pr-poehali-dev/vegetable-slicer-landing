@@ -152,7 +152,7 @@ const Index = () => {
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-primary">ТехноСиб</div>
+            <img src="https://cdn.poehali.dev/files/360a80ca-f911-4f02-94ff-c2728b707994.jpg" alt="ТехноСиб" className="h-8 sm:h-10" />
             <nav className="hidden md:flex items-center gap-8">
               <button onClick={() => scrollToSection('hero')} className="hover:text-primary transition-colors">Главная</button>
               <button onClick={() => scrollToSection('equipment')} className="hover:text-primary transition-colors">Оборудование</button>
@@ -180,8 +180,8 @@ const Index = () => {
         </div>
       </header>
 
-      <section id="hero" className="pt-32 pb-20 bg-gradient-to-br from-primary/5 via-white to-accent/5 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
+      <section id="hero" className="pt-32 pb-24 bg-gradient-to-br from-orange-50 via-orange-100 to-yellow-50 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
           <img 
             src="https://cdn.poehali.dev/projects/dc55a807-6efd-43bf-a71c-0f79d937bea4/files/a3746134-7909-48f2-b956-7985c8baada8.jpg"
             alt="Оборудование"
@@ -189,41 +189,47 @@ const Index = () => {
           />
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Акция на оборудование для мясного производства
+          <div className="max-w-5xl mx-auto text-center animate-fade-in">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-8 leading-tight">
+              <span className="bg-gradient-to-r from-orange-600 to-orange-800 bg-clip-text text-transparent">
+                Акция на оборудование
+              </span>
+              <br />
+              <span className="text-gray-800">
+                для мясного производства
+              </span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4">
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-600 mb-6">
               До 22.12.2025: скидка 5% от цен с сайта
             </p>
-            <p className="text-base sm:text-lg text-muted-foreground mb-8">
-              Оборудование на складе. Доставка за наш счёт.
+            <p className="text-xl sm:text-2xl text-gray-700 mb-12 font-medium">
+              Оборудование на складе • Доставка за наш счёт
             </p>
             
-            <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12">
-              <div className="bg-white rounded-lg p-3 sm:p-4 shadow-lg min-w-[60px] sm:min-w-[80px]">
-                <div className="text-2xl sm:text-3xl font-bold text-primary">{timeLeft.days}</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">дней</div>
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-12">
+              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl min-w-[90px] sm:min-w-[120px] border-4 border-orange-500">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-black text-orange-600">{timeLeft.days}</div>
+                <div className="text-base sm:text-lg font-semibold text-gray-600 mt-2">дней</div>
               </div>
-              <div className="bg-white rounded-lg p-3 sm:p-4 shadow-lg min-w-[60px] sm:min-w-[80px]">
-                <div className="text-2xl sm:text-3xl font-bold text-primary">{timeLeft.hours}</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">часов</div>
+              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl min-w-[90px] sm:min-w-[120px] border-4 border-orange-500">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-black text-orange-600">{timeLeft.hours}</div>
+                <div className="text-base sm:text-lg font-semibold text-gray-600 mt-2">часов</div>
               </div>
-              <div className="bg-white rounded-lg p-3 sm:p-4 shadow-lg min-w-[60px] sm:min-w-[80px]">
-                <div className="text-2xl sm:text-3xl font-bold text-primary">{timeLeft.minutes}</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">минут</div>
+              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl min-w-[90px] sm:min-w-[120px] border-4 border-orange-500">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-black text-orange-600">{timeLeft.minutes}</div>
+                <div className="text-base sm:text-lg font-semibold text-gray-600 mt-2">минут</div>
               </div>
-              <div className="bg-white rounded-lg p-3 sm:p-4 shadow-lg min-w-[60px] sm:min-w-[80px]">
-                <div className="text-2xl sm:text-3xl font-bold text-primary">{timeLeft.seconds}</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">секунд</div>
+              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl min-w-[90px] sm:min-w-[120px] border-4 border-orange-500">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-black text-orange-600">{timeLeft.seconds}</div>
+                <div className="text-base sm:text-lg font-semibold text-gray-600 mt-2">секунд</div>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Button size="lg" onClick={() => scrollToSection('equipment')} className="text-base sm:text-lg px-6 sm:px-8">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+              <Button size="lg" onClick={() => scrollToSection('equipment')} className="text-xl sm:text-2xl px-10 sm:px-12 py-6 sm:py-8 h-auto bg-orange-600 hover:bg-orange-700 font-bold shadow-xl">
                 Смотреть каталог
               </Button>
-              <Button size="lg" variant="outline" onClick={() => openQuickForm('Общий запрос')} className="text-base sm:text-lg px-6 sm:px-8">
+              <Button size="lg" variant="outline" onClick={() => openQuickForm('Общий запрос')} className="text-xl sm:text-2xl px-10 sm:px-12 py-6 sm:py-8 h-auto border-4 border-orange-600 text-orange-600 hover:bg-orange-50 font-bold shadow-xl">
                 Получить предложение
               </Button>
             </div>
@@ -236,25 +242,25 @@ const Index = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12">Акционные условия</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
             <div className="text-center animate-fade-in">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="Package" size={32} className="text-white" />
+              <div className="w-20 h-20 sm:w-24 sm:h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <Icon name="Package" size={48} className="text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Оборудование на складе</h3>
-              <p className="text-white/80">Готово к отгрузке</p>
+              <h3 className="text-2xl sm:text-3xl font-bold mb-3">Оборудование на складе</h3>
+              <p className="text-lg sm:text-xl text-white/90">Готово к отгрузке</p>
             </div>
             <div className="text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="Truck" size={32} className="text-white" />
+              <div className="w-20 h-20 sm:w-24 sm:h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <Icon name="Truck" size={48} className="text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Бесплатная доставка</h3>
-              <p className="text-white/80">До вашего производства</p>
+              <h3 className="text-2xl sm:text-3xl font-bold mb-3">Бесплатная доставка</h3>
+              <p className="text-lg sm:text-xl text-white/90">До вашего производства</p>
             </div>
             <div className="text-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="BadgePercent" size={32} className="text-white" />
+              <div className="w-20 h-20 sm:w-24 sm:h-24 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                <Icon name="BadgePercent" size={48} className="text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Скидка 5%</h3>
-              <p className="text-white/80">При оплате до 22.12.2025</p>
+              <h3 className="text-2xl sm:text-3xl font-bold mb-3">Скидка 5%</h3>
+              <p className="text-lg sm:text-xl text-white/90">При оплате до 22.12.2025</p>
             </div>
           </div>
           <div className="text-center">
@@ -279,26 +285,26 @@ const Index = () => {
                   />
                 </div>
                 <CardContent className="p-6 flex-grow flex flex-col">
-                  <h3 className="text-lg sm:text-xl font-bold mb-4">{item.name}</h3>
-                  <ul className="space-y-2 mb-4 flex-grow">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-4">{item.name}</h3>
+                  <ul className="space-y-3 mb-6 flex-grow">
                     {item.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <Icon name="Check" size={20} className="text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
+                      <li key={idx} className="flex items-start gap-3">
+                        <Icon name="Check" size={24} className="text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-base sm:text-lg">{feature}</span>
                       </li>
                     ))}
                   </ul>
                   <Accordion type="single" collapsible className="mb-4">
                     <AccordionItem value="details" className="border-none">
-                      <AccordionTrigger className="text-primary hover:no-underline text-sm sm:text-base">
+                      <AccordionTrigger className="text-primary hover:no-underline text-base sm:text-lg font-semibold">
                         Подробнее о модели
                       </AccordionTrigger>
                       <AccordionContent>
-                        <p className="text-sm text-muted-foreground">{item.details}</p>
+                        <p className="text-base text-muted-foreground">{item.details}</p>
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
-                  <Button onClick={() => openQuickForm(item.name)} className="w-full">
+                  <Button onClick={() => openQuickForm(item.name)} className="w-full text-lg py-6 font-semibold">
                     Получить предложение
                   </Button>
                 </CardContent>
