@@ -17,13 +17,13 @@ const Index = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [formData, setFormData] = useState({
     name: '',
-    phone: '',
+    phone: '+7',
     email: '',
     equipment: '',
     comment: '',
     consent: false
   });
-  const [quickFormData, setQuickFormData] = useState({ name: '', phone: '' });
+  const [quickFormData, setQuickFormData] = useState({ name: '', phone: '+7' });
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [selectedEquipment, setSelectedEquipment] = useState('');
   const [selectedEquipmentImage, setSelectedEquipmentImage] = useState('');
@@ -45,6 +45,17 @@ const Index = () => {
       }
     }, 1000);
 
+    const visitCookie = document.cookie.split('; ').find(row => row.startsWith('visited='));
+    if (!visitCookie) {
+      const expiryDate = new Date();
+      expiryDate.setFullYear(expiryDate.getFullYear() + 1);
+      document.cookie = `visited=true; expires=${expiryDate.toUTCString()}; path=/`;
+      document.cookie = `first_visit=${new Date().toISOString()}; expires=${expiryDate.toUTCString()}; path=/`;
+    }
+    const visitCount = parseInt(localStorage.getItem('visit_count') || '0') + 1;
+    localStorage.setItem('visit_count', visitCount.toString());
+    localStorage.setItem('last_visit', new Date().toISOString());
+
     return () => clearInterval(timer);
   }, []);
 
@@ -55,8 +66,33 @@ const Index = () => {
     }
   };
 
+  const handlePhoneChange = (value: string, isQuick: boolean = false) => {
+    let phone = value;
+    if (!phone.startsWith('+7')) {
+      phone = '+7';
+    }
+    const digits = phone.slice(2).replace(/\D/g, '');
+    if (digits.length <= 10) {
+      phone = '+7' + digits;
+    }
+    if (isQuick) {
+      setQuickFormData({...quickFormData, phone});
+    } else {
+      setFormData({...formData, phone});
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const phoneDigits = formData.phone.replace(/\D/g, '');
+    if (phoneDigits.length !== 11) {
+      toast({
+        title: 'Ошибка',
+        description: 'Телефон должен содержать 11 цифр',
+        variant: 'destructive'
+      });
+      return;
+    }
     if (!formData.consent) {
       toast({
         title: 'Ошибка',
@@ -69,7 +105,7 @@ const Index = () => {
       title: 'Заявка отправлена!',
       description: 'Мы свяжемся с вами в ближайшее время'
     });
-    setFormData({ name: '', phone: '', email: '', equipment: '', comment: '', consent: false });
+    setFormData({ name: '', phone: '+7', email: '', equipment: '', comment: '', consent: false });
   };
 
   const handleQuickSubmit = (e: React.FormEvent) => {
@@ -87,7 +123,7 @@ const Index = () => {
       title: 'Заявка отправлена!',
       description: `Мы свяжемся с вами по вопросу: ${selectedEquipment}`
     });
-    setQuickFormData({ name: '', phone: '' });
+    setQuickFormData({ name: '', phone: '+7' });
     setIsDialogOpen(false);
   };
 
@@ -506,8 +542,9 @@ const Index = () => {
                       type="tel"
                       required
                       value={formData.phone}
-                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      onChange={(e) => handlePhoneChange(e.target.value, false)}
                       placeholder="+7 (999) 123-45-67"
+                      maxLength={12}
                     />
                   </div>
                   <div>
@@ -679,18 +716,19 @@ const Index = () => {
                 placeholder="Введите ваше имя"
               />
             </div>
-            <div>
+            <div className="mb-6">
               <Label htmlFor="quick-phone">Телефон * (11 цифр)</Label>
               <Input
                 id="quick-phone"
                 type="tel"
                 required
                 value={quickFormData.phone}
-                onChange={(e) => setQuickFormData({...quickFormData, phone: e.target.value})}
+                onChange={(e) => handlePhoneChange(e.target.value, true)}
                 placeholder="+7 (999) 123-45-67"
+                maxLength={12}
               />
             </div>
-            <Button type="submit" className="w-full text-lg py-5 h-auto bg-orange-600 hover:bg-orange-700 font-bold shadow-xl">
+            <Button type="submit" className="w-full text-base py-4 h-auto bg-orange-600 hover:bg-orange-700 font-bold shadow-xl">
               Получить предложение со скидкой
             </Button>
           </form>
