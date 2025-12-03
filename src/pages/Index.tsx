@@ -91,7 +91,7 @@ const Index = () => {
     {
       id: 4,
       name: 'Блокорезка роторная DRB-PR 3000',
-      image: 'https://cdn.poehali.dev/projects/dc55a807-6efd-43bf-a71c-0f79d937bea4/files/8467db2e-4613-4313-ae63-9d3cb4838ef1.jpg',
+      image: 'https://cdn.poehali.dev/files/a109eda6-fca3-4cf3-83a4-1c19d9f26844.png',
       features: ['Производительность до 4000 кг/ч', 'Работа с блоками до 25 кг', 'Защитные кожухи', 'Регулируемая толщина резки'],
       details: 'Высокопроизводительная блокорезка для замороженного мяса'
     },
