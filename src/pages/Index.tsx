@@ -153,7 +153,7 @@ const Index = () => {
     {
       id: 9,
       name: 'Автоматический инъектор DRB-ZS50',
-      image: 'https://cdn.poehali.dev/files/840fc0f6-e0ed-403f-9b5c-6d834160d2a4.jpg',
+      image: 'https://cdn.poehali.dev/files/fc17b83b-6f2d-402e-86f5-628e9fa2c4b6.png',
       features: [
         'Импортные компоненты, надёжная конструкция',
         'Точечная посолка кости с воздушно-пружинным механизмом',
